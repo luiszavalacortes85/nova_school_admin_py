@@ -1,0 +1,11 @@
+<h1>Materias</h1>
+<a href="{% url 'subject_create' %}">Nueva Materia</a>
+<ul>
+  {% for subject in object_list %}
+    <li>
+      {{ subject.name }} ({{ subject.code }})
+      <a href="{% url 'subject_edit' subject.id %}">Editar</a>
+      <a href="{% url 'subject_delete' subject.id %}">Eliminar</a>
+    </li>
+  {% endfor %}
+</ul>

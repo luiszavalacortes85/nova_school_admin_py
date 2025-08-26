@@ -1,0 +1,6 @@
+<h1>¿Eliminar materia "{{ object }}"?</h1>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Sí, eliminar</button>
+</form>
+<a href="{% url 'subject_list' %}">Cancelar</a>
